@@ -1,0 +1,29 @@
+RewriteEngine on
+RewriteCond ${LeechProtect:/home/eternit2/public_html:%{REMOTE_USER}:%{REMOTE_ADDR}:4:eiDf5jevOWh94QDF2qGYpPY7sTm1cNzn} leech
+RewriteRule .* /
+RewriteOptions inherit
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^home\/mail\/eternitygroups\.in$ "htpps\:\/\/mail\.eternitygroups\.in\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^eternitygroups\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.eternitygroups\.in$
+RewriteRule ^server52\.hostingraja\.org\:2096$ "https\:\/\/mail\.eternitygroups\.in\/" [R=301,L]
+RewriteCond %{HTTP_REFERER} !^http://eternitygroups.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://eternitygroups.in$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://manjhiajay.eternitygroups.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://manjhiajay.eternitygroups.in$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.eternitygroups.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.eternitygroups.in$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.manjhiajay.eternitygroups.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.manjhiajay.eternitygroups.in$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://eternitygroups.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://eternitygroups.in$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://manjhiajay.eternitygroups.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://manjhiajay.eternitygroups.in$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.eternitygroups.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.eternitygroups.in$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.manjhiajay.eternitygroups.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.manjhiajay.eternitygroups.in$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+RewriteCond %{HTTP_HOST} ^eternitygroups\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.eternitygroups\.in$
+RewriteRule ^mail\.eternitygroups\.in$ "https\:\/\/eternitygroups\.in\:2096\/" [R=301,L]
